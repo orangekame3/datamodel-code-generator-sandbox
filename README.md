@@ -20,7 +20,7 @@ make generate-schema
 make run
 ```
 
-Check the following URL: http://127.0.0.1:8000/docs
+Check the following URL: [API Docs](http://127.0.0.1:8000/docs)
 
 ### Curl Example
 
