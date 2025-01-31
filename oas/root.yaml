@@ -1,0 +1,15 @@
+openapi: 3.0.1
+info:
+  title: Web API
+  version: '0.1'
+  description: simple web api
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+  - url: http://localhost:8080
+    description: Local server url
+paths:
+  /hello/{name}:
+    $ref: ./paths/hello.yaml#/hello.name
+

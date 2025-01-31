@@ -1,0 +1,9 @@
+hello.SayHelloResponse:
+  type: object
+  properties:
+    message:
+      type: string
+      description: hello message
+      example: 'hello world'
+  required:
+    - message

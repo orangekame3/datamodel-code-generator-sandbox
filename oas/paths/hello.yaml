@@ -1,0 +1,39 @@
+hello.name:
+  get:
+    tags:
+      - hello
+    summary: say hello
+    description: Returns a hello message
+    operationId: sayHello
+    security: []
+    parameters:
+      - in: path
+        name: name
+        description: name
+        required: true
+        schema:
+          type: string
+        example: 'world'
+    responses:
+      '200':
+        description: Returns a hello message
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: "../schemas/hello.yaml#/hello.SayHelloResponse"
+      "401":
+        description: Unauthorized
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/error.yaml#/error.UnauthorizedError'
+            example:
+              message: Unauthorized
+      '500':
+        description: Internal Server Error
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/error.yaml#/error.InternalServerError'
